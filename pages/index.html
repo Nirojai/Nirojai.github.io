@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ms. Nirojai Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --black: #0d0d0d;
+      --gold: #d4af37;
+ }
+   
+      body {
+      background-color: var(--black);
+      color: white;
+}
+ /* Image Carousel Smooth Fade */
+    .carousel-item {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      position: absolute;
+    }
+    .carousel-item.active {
+      opacity: 1;
+      position: relative;
+    }
+  </style>
+</head>
+<body class="font-sans">
+ <!-- Navbar -->
+  <nav class="bg-black text-white px-6 py-4 flex justify-between items-center shadow-lg sticky top-0 z-50">
+    <h1 class="text-2xl font-bold text-[--gold]">Ms. Nirojai Sritharan</h1>
+    <ul class="hidden md:flex space-x-6">
+      <li><a href="#home" class="hover:text-[--gold]">Home</a></li>
+      <li><a href="#about" class="hover:text-[--gold]">About</a></li>
+      <li><a href="#miwie" class="hover:text-[--gold]">MIWIE</a></li>
+      <li><a href="#projects" class="hover:text-[--gold]">Projects </a></li>
+      <li><a href="#contact" class="hover:text-[--gold]">Contact</a></li>
+    </ul>
+  </nav>
+
+ <!-- Hero Section -->
+  <section id="home" class="h-screen flex flex-col items-center justify-center text-center px-6 bg-[--black]">
+    <img src="/Assets/my-profile-photo.jpg" alt="Ms. Nirojai" class="rounded-full w-40 h-40 object-cover border-4 border-[--gold] mb-6"/>
+    <h2 class="text-4xl md:text-6xl font-bold text-[--gold] mb-4">HI, I'M NIROJAI</h2>
+    <p class="text-lg md:text-xl text-gray-300">Founder of MIWIE | Resin Artist | Educator  | Entrepreneur </p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-6 md:px-20 bg-[--black]">
+    <h2 class="text-3xl font-semibold text-[--gold] mb-6 text-center">About Me</h2>
+    <div class="max-w-4xl mx-auto text-gray-300 text-lg leading-relaxed">
+      <p style="text-align:justify;">Hello, I’m Ms. Nirojai Sritharan an educator, entrepreneur, and founder of MIWIE.
+</p><br>
+      <p style="text-align:justify;">With a strong foundation in Early Childhood Education and years of teaching experience, I bring creativity, discipline, and purpose to everything I do. My journey began in the classroom, where I taught English to primary and secondary students for over four years. Today, I’m pursuing my Bachelor of Arts in Education while building my creative brand from the ground up.
+</p><br>
+<p style="text-align:justify;">In 2021, I launched MIWIE, a unique handmade crafts brand inspired by imagination and emotion. From elegant keychains and coasters to custom shadow boxes and resin art, each creation tells a story – designed with care and crafted with heart.
+
+</p><br>
+<p style="text-align:justify;">Driven by passion and purpose, I balance education and entrepreneurship to bring meaningful, memorable pieces to life. Whether I’m in the studio or studying, my mission remains the same: to inspire through creativity and connect through craft.
+
+</p><br>
+<p style="text-align:justify;">Let’s create something unforgettable, together.</p>
+    </div>
+  </section>
+<!-- miwie Section -->
+  <section id="miwie-welcome" class="h-screen flex flex-col items-center justify-center text-center px-6 bg-[--black]">
+    <img src="/Assets/miwie.jpg" alt="miwie" class="rounded-full w-40 h-40 object-cover border-4 border-[--gold] mb-6" />
+    <h2 class="text-4xl md:text-6xl font-bold text-[--gold] mb-4">Welcome to MIWIE</h2>
+    <p class="text-lg md:text-xl text-gray-300">Your Imagination Our Creation </p>
+  </section>
+<!-- MIWIE Image Carousel -->
+  <section id="miwie" class="py-16 px-6 md:px-20 bg-[--black] text-center">
+    <h2 class="text-3xl font-semibold text-[--gold] mb-6">About MIWIE </h2>
+    <div class="relative max-w-xl mx-auto h-64 overflow-hidden">
+      <img class="carousel-item w-1/2 h-auto mx-auto" src="/Assets/miwie1.jpg" />
+      <img class="carousel-item w-1/2 h-auto mx-auto" src="/Assets/miwie2.jpg"  />
+      <img class="carousel-item w-1/2 h-auto mx-auto " src="/Assets/miwie3.jpg" />
+      <img class="carousel-item w-1/2 h-auto mx-auto" src="/Assets/miwie4.jpg" />
+      <img class="carousel-item w-1/2 h-auto mx-auto" src="/Assets/miwie5.jpg" />
+      <img class="carousel-item w-1/2 h-auto mx-auto" src="/Assets/miwie6.jpg" />
+      <img class="carousel-item w-1/2 h-auto mx-auto" src="/Assets/miwie7.jpg" />
+      <img class="carousel-item w-1/2 h-auto mx-auto" src="/Assets/miwie8.jpg" />
+    </div>
+  </section>
+<!-- Projects Section -->
+<section id="projects" class="py-16 px-6 md:px-20 bg-[--black]">
+  <h2 class="text-3xl font-semibold text-[--gold] mb-10 text-center">MIWIE Project Gallery</h2>
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <!-- Resin Keychains -->
+    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-[--gold]">
+      <h3 class="text-xl font-bold text-[--gold] mb-4 text-center">Resin Keychains</h3>
+      <div class="grid grid-cols-3 gap-3">
+        <img src="/Assets/keychain1.jpg" class="w-full cursor-pointer" onclick="openGallery('keychains', 0)" />
+        <img src="/Assets/keychain2.jpg" class="w-full cursor-pointer" onclick="openGallery('keychains', 1)" />
+        <img src="/Assets/keychain3.jpg" class="w-full cursor-pointer" onclick="openGallery('keychains', 2)" />
+        <img src="/Assets/keychain4.jpg" class="w-full cursor-pointer" onclick="openGallery('keychains', 3)" />
+        <img src="/Assets/keychain5.jpg" class="w-full cursor-pointer" onclick="openGallery('keychains', 4)" />
+<img src="/Assets/keychain6.jpg" class="w-full cursor-pointer" onclick="openGallery('keychains', 5)" />
+      </div>
+    </div>
+
+<!-- Resin Coasters -->
+    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-[--gold]">
+      <h3 class="text-xl font-bold text-[--gold] mb-4 text-center">Resin Coasters</h3>
+      <div class="grid grid-cols-3 gap-3">
+        <img src="/Assets/coaster1.jpg" class="w-full cursor-pointer" onclick="openGallery('coasters', 0)" />
+        <img src="/Assets/coaster2.jpg" class="w-full cursor-pointer" onclick="openGallery('coasters', 1)" />
+        <img src="/Assets/coaster3.jpg" class="w-full cursor-pointer" onclick="openGallery('coasters', 2)" />
+        <img src="/Assets/coaster4.jpg" class="w-full cursor-pointer" onclick="openGallery('coasters', 3)" />
+        <img src="/Assets/coaster5.jpeg" class="w-full cursor-pointer" onclick="openGallery('coasters', 4)" />
+        <img src="/Assets/coaster6.jpeg" class="w-full cursor-pointer" onclick="openGallery('coasters', 5)" />
+      </div>
+    </div>
+
+    <!-- Resin Baby Preservation Kit -->
+    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-[--gold]">
+      <h3 class="text-xl font-bold text-[--gold] mb-4 text-center">Resin Baby Preservation Kit</h3>
+      <div class="grid grid-cols-3 gap-3">
+        <img src="/Assets/baby1.jpg" class="w-full cursor-pointer" onclick="openGallery('baby', 0)" />
+        <img src="/Assets/baby2.jpeg" class="w-full cursor-pointer" onclick="openGallery('baby', 1)" />
+        <img src="/Assets/baby3.jpg" class="w-full cursor-pointer" onclick="openGallery('baby', 2)" />
+        <img src="/Assets/baby4.jpeg" class="w-full cursor-pointer" onclick="openGallery('baby', 3)" />
+        <img src="/Assets/baby5.jpg" class="w-full cursor-pointer" onclick="openGallery('baby', 4)" />
+        <img src="/Assets/baby6.jpg" class="w-full cursor-pointer" onclick="openGallery('baby', 5)" />
+      </div>
+    </div>
+
+    <!-- Resin Wedding Preservation Kit -->
+    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-[--gold]">
+      <h3 class="text-xl font-bold text-[--gold] mb-4 text-center">Resin Wedding Preservation Kit</h3>
+      <div class="grid grid-cols-3 gap-3">
+        <img src="/Assets/wedding1.jpg" class="w-full cursor-pointer" onclick="openGallery('wedding', 0)" />
+        <img src="/Assets/wedding2.jpg" class="w-full cursor-pointer" onclick="openGallery('wedding', 1)" />
+        <img src="/Assets/wedding3.jpeg" class="w-full cursor-pointer" onclick="openGallery('wedding', 2)" />
+        <img src="/Assets/wedding4.jpeg" class="w-full cursor-pointer" onclick="openGallery('wedding', 3)" />
+        <img src="/Assets/wedding5.jpg" class="w-full cursor-pointer" onclick="openGallery('wedding', 4)" />
+        <img src="/Assets/wedding6.jpeg" class="w-full cursor-pointer" onclick="openGallery('wedding', 5)" />
+      </div>
+    </div>
+
+    <!-- Shadow Boxes -->
+    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-[--gold]">
+      <h3 class="text-xl font-bold text-[--gold] mb-4 text-center">Shadow Boxes</h3>
+      <div class="grid grid-cols-3 gap-3">
+        <img src="/Assets/shadow1.jpeg" class="w-full cursor-pointer" onclick="openGallery('shadow', 0)" />
+        <img src="/Assets/shadow2.jpg" class="w-full cursor-pointer" onclick="openGallery('shadow', 1)" />
+        <img src="/Assets/shadow3.jpg" class="w-full cursor-pointer" onclick="openGallery('shadow', 2)" />
+        <img src="/Assets/shadow4.jpeg" class="w-full cursor-pointer" onclick="openGallery('shadow', 3)" />
+        <img src="/Assets/shadow5.jpg" class="w-full cursor-pointer" onclick="openGallery('shadow', 4)" />
+        <img src="/Assets/shadow6.jpg" class="w-full cursor-pointer" onclick="openGallery('shadow', 5)" />
+      </div>
+    </div>
+
+    <!-- Large Flower Preservation -->
+    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-[--gold]">
+      <h3 class="text-xl font-bold text-[--gold] mb-4 text-center">Large Flower Preservation</h3>
+      <div class="grid grid-cols-3 gap-3">
+        <img src="/Assets/flower1.jpg" class="w-full cursor-pointer" onclick="openGallery('flower', 0)" />
+        <img src="/Assets/flower2.jpg" class="w-full cursor-pointer" onclick="openGallery('flower', 1)" />
+        <img src="/Assets/flower3.jpg" class="w-full cursor-pointer" onclick="openGallery('flower', 2)" />
+        <img src="/Assets/flower4.jpg" class="w-full cursor-pointer" onclick="openGallery('flower', 3)" />
+        <img src="/Assets/flower5.jpg" class="w-full cursor-pointer" onclick="openGallery('flower', 4)" />
+        <img src="/Assets/flower6.jpg" class="w-full cursor-pointer" onclick="openGallery('flower', 5)" />
+      </div>
+    </div>
+
+    <!-- MIWIE Resin Aura -->
+    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-[--gold]">
+      <h3 class="text-xl font-bold text-[--gold] mb-4 text-center">MIWIE Resin Aura</h3>
+      <div class="grid grid-cols-3 gap-3">
+        <img src="/Assets/resin1.jpg" class="w-full cursor-pointer" onclick="openGallery('fancy', 0)" />
+        <img src="/Assets/resin2.jpg" class="w-full cursor-pointer" onclick="openGallery('fancy', 1)" />
+        <img src="/Assets/resin3.jpg" class="w-full cursor-pointer" onclick="openGallery('fancy', 2)" />
+        <img src="/Assets/resin4.jpg" class="w-full cursor-pointer" onclick="openGallery('fancy', 3)" />
+        <img src="/Assets/resin5.jpg" class="w-full cursor-pointer" onclick="openGallery('fancy', 4)" />
+        <img src="/Assets/resin6.jpg" class="w-full cursor-pointer" onclick="openGallery('fancy', 5)" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- Modal Gallery -->
+<div id="galleryModal" class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50">
+  <button onclick="closeGallery()" class="absolute top-6 right-6 text-white text-3xl font-bold">&times;</button>
+  <img id="galleryImage" class="max-w-full max-h-[80vh] rounded-lg shadow-lg" src="" />
+  <button onclick="prevImage()" class="absolute left-6 text-white text-4xl font-bold">&#10094;</button>
+  <button onclick="nextImage()" class="absolute right-6 text-white text-4xl font-bold">&#10095;</button>
+</div>
+
+<!-- Script -->
+<script>
+  const galleries = {
+    keychains: [
+      "/Assets/keychain1.jpg", "/Assets/keychain2.jpg", "/Assets/keychain3.jpg",
+      "/Assets/keychain4.jpg", "/Assets/keychain5.jpg", "/Assets/keychain6.jpg"
+    ],
+    coasters: [
+      "/Assets/coaster1.jpg", "/Assets/coaster2.jpg", "/Assets/coaster3.jpg",
+      "/Assets/coaster4.jpg", "/Assets/coaster5.jpeg", "/Assets/coaster6.jpeg"
+    ],
+    baby: [
+      "/Assets/baby1.jpg", "/Assets/baby2.jpeg", "/Assets/baby3.jpg",
+      "/Assets/baby4.jpeg", "/Assets/baby5.jpg", "/Assets/baby6.jpg"
+    ],
+    wedding: [
+      "/Assets/wedding1.jpg", "/Assets/wedding2.jpg", "/Assets/wedding3.jpeg",
+      "/Assets/wedding4.jpeg", "/Assets/wedding5.jpg", "/Assets/wedding6.jpeg"
+    ],
+shadow: [
+      "/Assets/shadow1.jpeg", "/Assets/shadow2.jpg", "/Assets/shadow3.jpg",
+      "/Assets/shadow4.jpeg", "/Assets/shadow5.jpg", "/Assets/shadow6.jpg"
+    ],
+    flower: [
+      "/Assets/flower1.jpg", "/Assets/flower2.jpg", "/Assets/flower3.jpg",
+      "/Assets/flower4.jpg", "/Assets/flower5.jpg", "/Assets/flower6.jpg"
+    ],
+    fancy: [
+      "/Assets/resin1.jpg", "/Assets/resin2.jpg", "/Assets/resin3.jpg",
+      "/Assets/resin4.jpg", "/Assets/resin5.jpg", "/Assets/resin6.jpg"
+    ]
+  };
+
+  let currentGallery = [];
+  let currentIndex = 0;
+
+  function openGallery(type, index) {
+    currentGallery = galleries[type];
+    currentIndex = index;
+    updateGalleryImage();
+    document.getElementById("galleryModal").classList.remove("hidden");
+    document.getElementById("galleryModal").classList.add("flex");
+ }
+
+  function updateGalleryImage() {
+    const img = document.getElementById("galleryImage");
+    img.src = currentGallery[currentIndex];
+  }
+
+  function closeGallery() {
+    document.getElementById("galleryModal").classList.remove("flex");
+    document.getElementById("galleryModal").classList.add("hidden");
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    updateGalleryImage();
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    updateGalleryImage();
+  }
+</script>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-6 md:px-20 bg-[--black]">
+    <h2 class="text-3xl font-semibold text-[--gold] mb-6 text-center">Contact Me</h2>
+    <form class="max-w-xl mx-auto space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full px-4 py-2 bg-gray-800 text-white border border-[--gold] rounded" />
+      <input type="email" placeholder="Your Email" class="w-full px-4 py-2 bg-gray-800 text-white border border-[--gold] rounded" />
+      <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-2 bg-gray-800 text-white border border-[--gold] rounded"></textarea>
+      <button type="submit" class="bg-[--gold] text-black font-bold px-6 py-2 rounded hover:bg-yellow-400">Send</button>
+    </form>
+  </section>
+
+  <section id="contact" class="py-16 px-6 md:px-20 bg-[--black] text-center">
+    <h2 class="text-3xl font-semibold text-[--gold] mb-6"> Stay Connect with me </h2>
+    <div class="flex justify-center gap-6 text-[--gold] text-2xl">
+      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">Instagram</a>
+      <a href="https://www.tiktok.com/@miwie.offl?_t=ZS-8wmadxGQIkL&_r=1" target="_blank" aria-label="TikTok">TikTok</a>
+      <a href="https://www.facebook.com/245262245347728?ref=_xav_ig_profile_page_web_0515" target="_blank" aria-label="Facebook">Facebook</a>
+      <a href="https://www.linkedin.com/in/nirojai-s-7193b1223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+      <a href="http://wa.me/94743837011" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+      <a href="https://youtube.com/@miwieoffl?si=NyzR59Szne5CLU5f" target="_blank" aria-label="YouTube">YouTube</a>
+      <a hreft="miwieoffl@gmail.com" target="_blank" aria-label="gmail">Gmail</a>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-black text-center text-gray-400 py-4">
+    <p>&copy; 2025 Ms. Nirojai – MIWIE. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Carousel -->
+  <script>
+    const items = document.querySelectorAll('.carousel-item');
+    let current = 0;
+setInterval(() => {
+      items[current].classList.remove('active');
+      current = (current + 1) % items.length;
+      items[current].classList.add('active');
+    }, 2000); // 2 seconds
+  </script>
+
+</body>
+</html>
